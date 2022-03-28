@@ -7,7 +7,9 @@ import { SickListComponent } from './Patients/sick-list/sick-list.component';
 import { RecoveredListComponent } from './Patients/recovered-list/recovered-list.component';
 import { AttentionListComponent } from './Patients/attention-list/attention-list.component';
 import { PatientsComponent } from './Patients/patients/patients.component';
-import { SurgeryComponent } from './surgery/surgery/surgery.component';
+import { SurgeryComponent } from './Surgery/surgery/surgery.component';
+import { NavbarComponent } from './Navbar/navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { SurgeryComponent } from './surgery/surgery/surgery.component';
     RecoveredListComponent,
     AttentionListComponent,
     PatientsComponent,
-    SurgeryComponent
+    SurgeryComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
