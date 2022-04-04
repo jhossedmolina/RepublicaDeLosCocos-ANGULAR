@@ -1,1 +1,101 @@
-<p>patients works!</p>
+<div class="jumbotron">
+  <h1 class="display-4 text-center">{{title | uppercase}}</h1>
+</div>
+<section class="register">
+  <form [formGroup]="form" (ngSubmit)="registerPatient()">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <!--/*[class.green-icon]="this.form.get('id').valid"-->
+            <fa-icon [icon]="faAddressCard"></fa-icon>
+          </div>
+        </div>
+        <input type="text" class="form-control" formControlName="id" placeholder="Identificacion" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <fa-icon [icon]="faUser"></fa-icon>
+          </div>
+        </div>
+        <input type="text" class="form-control" formControlName="fullName" placeholder="Nombre Completo" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-stopwatch-20"></i>
+          </div>
+        </div>
+        <input type="text" class="form-control" formControlName="age" placeholder="Edad" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-venus-mars"></i>
+          </div>
+        </div>
+        <label for="gender" class="label-group bg-white">Seleccione El Genero</label>
+        <select class="options-gender" id="gender" name="gender" formControlName="gender">
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-clinic-medical"></i>
+          </div>
+        </div>
+        <label for="triage" class="label-group bg-white">Seleccione El Triage</label>
+        <select class="options-triage" id="triage" name="triage" formControlName="idTriage">
+          <option value="1">Atencion Inmediata</option>
+          <option value="2">Riesgo Vital</option>
+          <option value="3">Urgencia Menor</option>
+          <option value="4">No Urgencia</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-stopwatch-20"></i>
+          </div>
+        </div>
+        <textarea class="symptoms" name="" id="" cols="44" rows="3" formControlName="symptom" placeholder="Sintomas"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <fa-icon [icon]="faUser"></fa-icon>
+          </div>
+        </div>
+        <input type="datetime-local" class="form-control" formControlName="checkIn" placeholder="Nombre Completo" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="form.invalid"><i class="fas fa-database"></i> REGISTRAR PACIENTE</button>
+    </div>
+  </form>
+</section>
+
+
+

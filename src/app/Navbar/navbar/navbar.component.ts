@@ -7,7 +7,7 @@ import { faHospital } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  title = 'Republica De Los Cocos';
   faHospital = faHospital;
   constructor() { }
 

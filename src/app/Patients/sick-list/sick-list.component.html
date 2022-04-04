@@ -1,1 +1,28 @@
-<p>sick-list works!</p>
+<h1>{{title | uppercase}}</h1>
+
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">NUMERO DE IDENTIFICACION</th>
+      <th scope="col">NOMBRE COMPLETO</th>
+      <th scope="col">EDAD</th>
+      <th scope="col">GENERO</th>
+      <th scope="col">SINTOMAS</th>
+      <th scope="col">TRIAGE</th>
+      <th scope="col">HORA DE LLEGADA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sicks">
+      <td>{{item.id}}</td>
+      <td>{{item.fullName}}</td>
+      <td>{{item.age}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.symptom}}</td>
+      <td>{{item.idTriage}}</td>
+      <td>{{item.checkIn}}</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+

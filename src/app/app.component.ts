@@ -7,6 +7,6 @@ import { faCoffee, faHospital } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'RepublicaDeLosCocos-ANGULAR';
+  title = 'Republica De Los Cocos';
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Patient, PatientService } from 'src/app/services/patient.service';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-sick-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SickListComponent implements OnInit {
 
-  constructor() { }
+  title = 'Lista De Enfermos'
+
+  sicks: Patient[] = [];
+
+  constructor(private service: PatientService) { }
 
   ngOnInit(): void {
+    this.service.getSickList()
+    .subscribe(res => {
+      this.sicks = [...res];
+    });
   }
 
 }
